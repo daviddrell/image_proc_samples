@@ -19,13 +19,14 @@ extern "C" {
     
     /// <summary>
     /// resize_Cuda() implements a cuda image resize using the NVIDIA provided function nppiResize_32f_C1R_Ctx().
-    /// from a c program, this function can be called with just the memory pointer for the images and
+    /// from a normal c program, this function can be called with just the memory pointers for the images and
     /// the image sizes.
     /// 
     /// The memory for both the source and output images must be allocated and managed by the caller.
     /// The source image memory should be first initialized with the source image pixels.
+    /// 
     /// The output memory must be allocated but does not need to be intialized to any values.
-    /// The output memory will contained the scaled down image pixels after the call.
+    /// The output memory will contain the scaled down image pixels after the call.
     /// 
     /// The scaling algorithm is hard-coded to NPPI_INTER_CUBIC. You could make this an additional parameter to the call.
     /// 

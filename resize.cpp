@@ -9,12 +9,15 @@
 #include "npp.h"
 
 
+// This function is a cuda program compiled with the nvidia cuda compiler.
+// Once built into a library, it can be called from a c program or any program that call call a c library.
+// The calling program does not need to know anything about cuda programming.
+
 int resize_Cuda(float* src, float* dst, __int32 src_width, __int32 src_height, __int32 dst_width, __int32 dst_height)
 {
     float* dev_src = 0;
     float* dev_dst = 0;
     cudaError_t cudaStatus;
-
 
     // Allocate GPU buffers for the two images (one input, one output)    
     size_t memsizeSrc = (size_t)src_width * (size_t)src_height * (size_t)sizeof(float);
