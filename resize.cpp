@@ -1,4 +1,3 @@
-#define BLACKBOXFINDER_H_PRIVATE
 #include "resize.h"
 #include "stdio.h"
 #include <math.h>
@@ -10,7 +9,7 @@
 
 
 // This function is a cuda program compiled with the nvidia cuda compiler.
-// Once built into a library, it can be called from a c program or any program that call call a c library.
+// Once built into a library, it can be called from a c program or any program that can call a c library.
 // The calling program does not need to know anything about cuda programming.
 
 int resize_Cuda(float* src, float* dst, __int32 src_width, __int32 src_height, __int32 dst_width, __int32 dst_height)
