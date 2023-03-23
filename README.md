@@ -7,4 +7,4 @@ Refer to the main.cu and resize.h for details.
 
 # project setup
 
-The project structure is Visual 2019 with Cuda 11.7 installed.
+The project structure is Visual Studio 2019 with Cuda 11.7 installed.
